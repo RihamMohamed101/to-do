@@ -1,6 +1,4 @@
 
-
-
 let inp = document.getElementById('inp');
 let containerList = document.getElementById('container-list');
 let btnAdd = document.getElementById('btnAdd');
@@ -50,7 +48,14 @@ function savaData() {
 }
 
 function retDAta() {
-         containerList.innerHTML = localStorage.getItem("data");
+    if (localStorage.getItem("data") === null) {
+        containerList.innerHTML = '';
+    }
+    
+    else
+    {
+        containerList.innerHTML = localStorage.getItem("data");
+    }
     }
 
 retDAta();
