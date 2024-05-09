@@ -50,11 +50,7 @@ function savaData() {
 }
 
 function retDAta() {
-    if (localStorage.data !== null) {
-         containerList.innerHTML = localStorage.data;
-    }
-
-   
+         containerList.innerHTML = localStorage.getItem("data");
     }
 
 retDAta();
