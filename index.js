@@ -45,18 +45,13 @@ containerList.addEventListener('click', (e) => {
 
 function savaData() {
     localStorage.setItem('data', containerList.innerHTML);
+  
 }
 
 function retDAta() {
-    if (localStorage.getItem("data") === null) {
-        containerList.innerHTML = '';
-    }
-    
-    else
-    {
+    if (localStorage.getItem("data") !== undefined) {
         containerList.innerHTML = localStorage.getItem("data");
     }
     }
 
 retDAta();
-
