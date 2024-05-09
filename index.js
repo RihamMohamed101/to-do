@@ -52,6 +52,11 @@ function retDAta() {
     if (localStorage.getItem("data") !== undefined) {
         containerList.innerHTML = localStorage.getItem("data");
     }
+
+    else
+    {
+        containerList.innerHTML = '';
+        }
     }
 
 retDAta();
