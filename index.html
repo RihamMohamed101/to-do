@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do-List</title>
+
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+     <style> 
+
+        input:focus {
+            border: none !important;
+            box-shadow: none !important;
+        }
+
+        ul li {
+            margin-top: 10px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        ul li::before {
+             content: "";
+             position: absolute;
+             width: 20px;
+             height: 20px;
+             background-image: url(./images/unchecked.png);
+             background-position: center;
+             background-size: cover;
+             left: -35px;
+             top: 3px;
+        }
+
+        ul li.check {
+            text-decoration: line-through;
+            color: rgba(0, 0, 0, 0.218);
+        }
+
+        ul li.check::before {
+              background-image: url(./images/checked.png);
+        }
+
+
+        li span {
+            display: inline-flex ;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background-color: rgb(233, 132, 16);
+            color: #fff;
+            justify-content: center;
+            align-items: center;
+            line-height: 1.7;
+            font-size: 25px;
+            position: absolute;
+            right: 0;
+            padding: 0 !important;
+
+        }
+    </style>
+</head>
+<body class="text-dark bg-dark ">
+    
+   <div class="container  mt-3 ">
+       <div class="row justify-content-center ">
+             
+           <div class="col-md-6 bg-light   p-3 rounded-3">
+
+              <h2 class="p-2">
+                 to-Do-list 
+                 <img src="./images/icon.png" alt="" style="width: 50px;">
+              </h2>
+
+              <div class="inp-box d-flex p-2 justify-content-between align-items-center bg-dark rounded-5 ">
+                <input id="inp" type="text" placeholder="Add Task"  class="form-control w-75 border-0 bg-transparent text-light">
+                <button class=" w-25 btn btn-warning p-2 rounded-5" id="btnAdd">Add</button>
+              </div>
+
+              <ul id="container-list" class="mt-3 px-5 py-2 list-unstyled">
+                
+                <!-- <li class="check">task1</li>
+                <li>task1</li>
+                <li>task1</li> -->
+
+              </ul>
+
+           </div>
+
+
+       </div>
+
+
+
+
+
+   </div>
+      
+
+
+
+
+
+
+
+
+
+
+    <script src="./index.js"></script>
+</body>
+</html>
